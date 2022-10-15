@@ -46,7 +46,9 @@
             </div>
             <div class="actions">
                 <button mat-button (click)="cancel()">Cancel</button>
-                <button mat-flat-button color="primary" (click)="onSave()">Save</button>
+                <ng-container *ngIf="!model">
+                    <button mat-flat-button color="primary" (click)="onSave()">Save</button>
+                </ng-container>
             </div>
         </form>
     </section>

@@ -49,7 +49,7 @@
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions</th>
             <td mat-cell *matCellDef="let model">
-                <button mat-icon-button aria-label="view item" title="View" (click)="onView()">
+                <button mat-icon-button aria-label="view item" title="View" (click)="onView(model)">
                     <mat-icon>pageview</mat-icon>
                 </button>
             </td>

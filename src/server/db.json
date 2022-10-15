@@ -55,6 +55,14 @@
       "email": "asd789@gmail.com",
       "date": 1665950400000,
       "phone": "+374 99 789 789"
+    },
+    {
+      "id": 8,
+      "title": "Note",
+      "body": "Please note that the cost of items displayed are completely and totally made up.",
+      "email": "asd@gmail.com",
+      "date": 1665864000000,
+      "phone": "+374 99 887 943"
     }
   ]
 }

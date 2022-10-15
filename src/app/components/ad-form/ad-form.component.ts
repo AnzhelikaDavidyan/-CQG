@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {DataService} from "../../shared/services/data.service";
+import {AdModel} from "../../shared/model/ad.model";
 
 @Component({
     selector: 'app-ad-form',
@@ -11,24 +12,29 @@ import {DataService} from "../../shared/services/data.service";
 export class AdFormComponent implements OnInit {
 
     public formGroup!: FormGroup;
-    private adId: string | null = this.activatedRoute?.snapshot?.paramMap?.get('id');
+    public model!: AdModel;
 
     constructor(private formBuilder: FormBuilder,
                 private activatedRoute: ActivatedRoute,
                 private dataService: DataService,
                 private router: Router) {
-        this.initForm()
+        this.model = this.router.getCurrentNavigation()?.extras?.state as AdModel;
+        this.initForm(this.model);
     }
 
-    private initForm(): void {
-        const isNew = this.adId && +this.adId === -1;
+    private initForm(model?: AdModel): void {
+        const isView = !!model;
         this.formGroup = this.formBuilder.group({
-            id: new FormControl(isNew ? null : null),
-            title: new FormControl(null, [Validators.required]),
-            body: new FormControl(null, [Validators.required]),
-            email: new FormControl(null,),
-            date: new FormControl(null, [Validators.required]),
-            phone: new FormControl(null, [Validators.required]),
+            id: new FormControl(model ? model.id : null),
+            title: new FormControl({value: model ? model.title : null, disabled: isView},
+                [Validators.required]),
+            body: new FormControl({value: model ? model.body : null, disabled: isView},
+                [Validators.required]),
+            email: new FormControl({value: model ? model.email : null, disabled: isView}),
+            date: new FormControl({value: model ? model.date : null, disabled: isView},
+                [Validators.required]),
+            phone: new FormControl({value: model ? model.phone : null, disabled: isView},
+                [Validators.required]),
 
         });
     }
@@ -37,7 +43,7 @@ export class AdFormComponent implements OnInit {
     }
 
     public onSave() {
-        if (this.adId ?? this.adId === -1) {
+        if (!this.model) {
             this.dataService.addItem(this.formGroup.value).subscribe({
                 next: (data) => {
                     console.log(data);

@@ -66,7 +66,7 @@ export class AdListComponent implements OnInit, AfterViewInit {
         this.router.navigateByUrl(`ads/-1`);
     }
 
-    public onView() {
-
+    public onView(model: any) {
+        this.router.navigateByUrl(`ads/${model.id}`, {state: model});
     }
 }
