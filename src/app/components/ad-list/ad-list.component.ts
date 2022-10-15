@@ -4,6 +4,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {map, of} from "rxjs";
 import {DataService} from "../../shared/services/data.service";
 import {MatDatepickerInputEvent} from "@angular/material/datepicker";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-ad-list',
@@ -16,7 +17,7 @@ export class AdListComponent implements OnInit {
     public displayedColumns: string[] = ['id', 'title', 'date', 'actions'];
     public isReady$ = of(false);
 
-    constructor(private dataService: DataService) {
+    constructor(private dataService: DataService, private router: Router) {
     }
 
     ngOnInit(): void {
@@ -39,7 +40,7 @@ export class AdListComponent implements OnInit {
     }
 
     public onAdd() {
-
+        this.router.navigateByUrl(`ads/-1`);
     }
 
     public onView() {
