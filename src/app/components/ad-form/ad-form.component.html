@@ -22,7 +22,7 @@
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Phone</mat-label>
-                    <input matInput formControlName="title">
+                    <input matInput formControlName="phone">
                     <mat-error>Phone is required.</mat-error>
                 </mat-form-field>
             </div>
@@ -30,7 +30,7 @@
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input matInput formControlName="title">
+                    <input matInput formControlName="email">
                     <mat-error>Email is required.</mat-error>
                 </mat-form-field>
             </div>
@@ -45,7 +45,7 @@
                 </mat-form-field>
             </div>
             <div class="actions">
-                <button mat-button mat-dialog-close>Cancel</button>
+                <button mat-button (click)="cancel()">Cancel</button>
                 <button mat-flat-button color="primary" (click)="onSave()">Save</button>
             </div>
         </form>

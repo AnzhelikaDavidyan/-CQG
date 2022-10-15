@@ -48,4 +48,7 @@ export class AdFormComponent implements OnInit {
 
     }
 
+    cancel() {
+        this.router.navigateByUrl(`ads`);
+    }
 }

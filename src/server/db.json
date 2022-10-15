@@ -18,19 +18,11 @@
     },
     {
       "id": 3,
-      "title": "anzhelika@gmail.com",
-      "body": "test",
-      "email": null,
-      "date": "2022-10-21T20:00:00.000Z",
-      "phone": null
-    },
-    {
-      "id": 4,
-      "title": "asdas@gmalcd",
-      "body": "adsf",
-      "email": null,
-      "date": "2022-10-24T20:00:00.000Z",
-      "phone": null
+      "title": "Ad 3",
+      "body": "ad 3",
+      "email": "anzhelika@gmail.com",
+      "date": 1665950400000,
+      "phone": "12356"
     }
   ]
 }

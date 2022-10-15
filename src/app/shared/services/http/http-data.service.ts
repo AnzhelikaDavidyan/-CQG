@@ -30,6 +30,7 @@ export class HttpDataService extends DataService {
         return this.getLastId().pipe(
             switchMap((id: number) => {
                 model.id = ++id;
+                model.date = +new Date(model.date);
                 const headers = {'content-type': 'application/json'};
                 return this.httpClient.post(`${config.apiUrl}/${config.ADS}`, JSON.stringify(model), {
                     headers
