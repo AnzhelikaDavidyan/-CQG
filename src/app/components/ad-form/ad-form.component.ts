@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {DataService} from "../../shared/services/data.service";
 
 @Component({
     selector: 'app-ad-form',
@@ -10,9 +11,12 @@ import {ActivatedRoute} from "@angular/router";
 export class AdFormComponent implements OnInit {
 
     public formGroup!: FormGroup;
-    private adId: string | null = this.activatedRoute.snapshot.paramMap.get('id');
+    private adId: string | null = this.activatedRoute?.snapshot?.paramMap?.get('id');
 
-    constructor(private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) {
+    constructor(private formBuilder: FormBuilder,
+                private activatedRoute: ActivatedRoute,
+                private dataService: DataService,
+                private router: Router) {
         this.initForm()
     }
 
@@ -33,6 +37,14 @@ export class AdFormComponent implements OnInit {
     }
 
     public onSave() {
+        if (this.adId ?? this.adId === -1) {
+            this.dataService.addItem(this.formGroup.value).subscribe({
+                next: (data) => {
+                    console.log(data);
+                    this.router.navigateByUrl(`ads`)
+                }
+            })
+        }
 
     }
 

@@ -1,20 +1,36 @@
 {
-    "ads": [
-        {
-            "id": 1,
-            "title": "Ad 1",
-            "phone": "1234567",
-            "date": "1665777600000",
-            "email": "aaa@gmail.com",
-            "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
-        },
-        {
-            "id": 2,
-            "title": "Ad 2",
-            "phone": "999999",
-            "date": "1665432000000",
-            "email": "bbb@gmail.com",
-            "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
-        }
-    ]
+  "ads": [
+    {
+      "id": 1,
+      "title": "Ad 1",
+      "phone": "1234567",
+      "date": "1665777600000",
+      "email": "aaa@gmail.com",
+      "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
+    },
+    {
+      "id": 2,
+      "title": "Ad 2",
+      "phone": "999999",
+      "date": "1665432000000",
+      "email": "bbb@gmail.com",
+      "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
+    },
+    {
+      "id": 3,
+      "title": "anzhelika@gmail.com",
+      "body": "test",
+      "email": null,
+      "date": "2022-10-21T20:00:00.000Z",
+      "phone": null
+    },
+    {
+      "id": 4,
+      "title": "asdas@gmalcd",
+      "body": "adsf",
+      "email": null,
+      "date": "2022-10-24T20:00:00.000Z",
+      "phone": null
+    }
+  ]
 }
