@@ -1,7 +1,8 @@
 export interface AdModel {
-  id: number;
-  title: string;
-  body: string;
-  phone: string;
-  email: string;
+    id: number;
+    title: string;
+    body: string;
+    phone: string;
+    email: string;
+    date: number;
 }

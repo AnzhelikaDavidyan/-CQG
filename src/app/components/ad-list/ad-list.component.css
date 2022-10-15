@@ -21,3 +21,18 @@ table {
     justify-content: space-between;
     margin: 8px 0;
 }
+
+.filter-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filter-title {
+    width: 300px;
+    margin: 16px 8px;
+}
+
+.filter-date {
+    margin: 16px;
+}
