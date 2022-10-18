@@ -15,6 +15,7 @@ export const routes: Routes = [
     },
     {
         path: 'ads/:id',
+        title: 'Ad Add',
         loadChildren: () => import('./components/ad-form/ad-form.module').then(m => m.AdFormModule)
     }
 ];

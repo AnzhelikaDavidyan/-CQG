@@ -19,7 +19,8 @@
         <div class="filter-category">
             <mat-form-field appearance="outline">
                 <mat-label>Category</mat-label>
-                <mat-select >
+                <mat-select>
+                    <mat-option>Reset</mat-option>
                     <mat-option *ngFor="let item of categories$ | async" [value]="item.id"
                                 (onSelectionChange)="applyCategoryFilter($event)">
                         {{item.name }}
@@ -37,7 +38,6 @@
                 <mat-datepicker #dp3 disabled="false"></mat-datepicker>
             </mat-form-field>
         </div>
-
     </div>
     <table mat-table [dataSource]="dataSource" matSort #table>
         <!-- Id Column -->

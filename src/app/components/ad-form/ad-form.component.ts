@@ -17,12 +17,14 @@ export class AdFormComponent implements OnInit {
     public formGroup!: FormGroup;
     public model!: AdModel;
     public categories$: Observable<CategoryModel[]> = of([]);
+    public title: string;
 
     constructor(private formBuilder: FormBuilder,
                 private activatedRoute: ActivatedRoute,
                 private dataService: DataService,
                 private router: Router) {
         this.model = this.router.getCurrentNavigation()?.extras?.state as AdModel;
+        this.title = !!this.model ? 'View Add' : 'Add New Ad';
         this.initForm(this.model);
     }
 

@@ -58,12 +58,14 @@ export class AdListComponent implements OnInit, AfterViewInit {
     }
 
     public applyCategoryFilter(event: MatOptionSelectionChange<number>) {
+        this.dataSource.filterPredicate = ((model: AdModel, filter: string) => model.categoryId.toString() === filter);
         if (event.isUserInput) {
             const filteredValue = event.source.value;
-            this.dataSource.filterPredicate = ((model: AdModel, filter: string) => model.categoryId.toString() === filter);
             this.dataSource.filter = filteredValue.toString();
-            this.firstPage();
+        } else {
+            this.dataSource.filter = '';
         }
+        this.firstPage();
     }
 
     public applyDateFilter(event: MatDatepickerInputEvent<Date>) {
@@ -85,4 +87,5 @@ export class AdListComponent implements OnInit, AfterViewInit {
     public onView(model: any) {
         this.router.navigateByUrl(`ads/${model.id}`, {state: model});
     }
+
 }

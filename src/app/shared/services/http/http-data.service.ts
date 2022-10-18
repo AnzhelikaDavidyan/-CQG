@@ -26,12 +26,10 @@ export class HttpDataService extends DataService {
         );
     }
 
-    public addItem<AdModel>(model: AdModel): Observable<Object> {
+    public addItem<M extends AdModel>(model: AdModel): Observable<Object> {
         return this.getLastId().pipe(
             switchMap((id: number) => {
-                // @ts-ignore
                 model.id = ++id;
-                // @ts-ignore
                 model.date = +new Date(model.date);
                 const headers = {'content-type': 'application/json'};
                 return this.httpClient.post(`${config.apiUrl}/${config.ADS}`, JSON.stringify(model), {
