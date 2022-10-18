@@ -12,11 +12,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import {routes} from "./app.routing";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ReadClassifierPipe} from "./shared/pipes/read-classifier.pipe";
 
 @NgModule({
     declarations: [
         AppComponent,
         AdListComponent,
+        ReadClassifierPipe
     ],
     imports: [
         BrowserModule,

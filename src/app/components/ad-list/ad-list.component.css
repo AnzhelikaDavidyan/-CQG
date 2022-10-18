@@ -28,11 +28,15 @@ table {
     flex-wrap: wrap;
 }
 
-.filter-title {
+.filter-title, .filter-category {
     width: 300px;
     margin: 16px 8px;
 }
 
 .filter-date {
     margin: 16px;
+}
+
+.th-title {
+    width: 350px;
 }

@@ -13,8 +13,20 @@
         <div class="filter-title">
             <mat-form-field appearance="standard">
                 <mat-label>by title</mat-label>
-                <input matInput (keyup)="applyTitleFilter($event)" placeholder="Ex. Ad 1" #input>
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ad 1" #input>
             </mat-form-field>
+        </div>
+        <div class="filter-category">
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <mat-select >
+                    <mat-option *ngFor="let item of categories$ | async" [value]="item.id"
+                                (onSelectionChange)="applyCategoryFilter($event)">
+                        {{item.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
         </div>
         <div class="filter-date">
             <mat-form-field appearance="fill">
@@ -33,10 +45,17 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
             <td mat-cell *matCellDef="let item"> {{item.id}} </td>
         </ng-container>
+
         <!-- Title Column -->
         <ng-container matColumnDef="title">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Title</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="th-title"> Title</th>
             <td mat-cell *matCellDef="let item"> {{item.title}} </td>
+        </ng-container>
+
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category</th>
+            <td mat-cell *matCellDef="let item"> {{item.categoryId | readClassifier | async}} </td>
         </ng-container>
 
         <!-- date Column -->

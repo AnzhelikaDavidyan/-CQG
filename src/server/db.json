@@ -3,22 +3,25 @@
     {
       "id": 1,
       "title": "Ad 1",
+      "categoryId": 1,
       "phone": "1234567",
-      "date": "1665777600000",
+      "date": 1665950400000,
       "email": "aaa@gmail.com",
       "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
     },
     {
       "id": 2,
       "title": "Ad 2",
+      "categoryId": 1,
       "phone": "999999",
-      "date": "1665432000000",
+      "date": 1665950400000,
       "email": "bbb@gmail.com",
       "body": "quia et suscipitnsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto "
     },
     {
       "id": 3,
       "title": "Ad 3",
+      "categoryId": 1,
       "body": "ad 3",
       "email": "anzhelika@gmail.com",
       "date": 1665950400000,
@@ -27,6 +30,7 @@
     {
       "id": 4,
       "title": "Ad  4",
+      "categoryId": 1,
       "body": "We’re taking significant steps to bring more transparency to ads and Pages on Facebook. Giving people more information about any organization and the ads it's currently running will mean increased accountability for bad actors, which will help to prevent abuse on Facebook.",
       "email": "ad@gmail.com",
       "date": 1666123200000,
@@ -35,6 +39,7 @@
     {
       "id": 5,
       "title": "Display&Video 360 Is A Comprehensive Advertising",
+      "categoryId": 2,
       "body": "In April, we announced that we would make our Pages and ads more transparent. Today, June 28, we’re introducing a new Info and Ads section on Pages. This section is designed to bring additional transparency to Pages and the ads they’re running. Info and Ads allows anyone on Facebook to view the active ads a Page is running as well as the ability to learn more information about the Page (such as the date created and any previous name changes).\n\n",
       "email": "amend@gmail.com",
       "date": 1665864000000,
@@ -43,6 +48,7 @@
     {
       "id": 6,
       "title": "The best advertising technology available today that many of your competitors don't even know about",
+      "categoryId": 3,
       "body": "The best advertising technology available today that many of your competitors don't even know aboutThe best advertising technology available today that many of your competitors don't even know about",
       "email": "dadadad@gmail.com",
       "date": 1666382400000,
@@ -51,6 +57,7 @@
     {
       "id": 7,
       "title": "Facebook, Instagram, Messenger",
+      "categoryId": 3,
       "body": "From the Info and Ads tab, people will be able to view the active ads a Page is running across Facebook, Instagram, Messenger and Audience Network, even if they’re not in the target audience. People can click on interactive elements of the ads, but engagement, such as Likes, comments or shares will not be available. In addition, impressions, video views and clicks on ads within the Info and Ads section will not",
       "email": "asd789@gmail.com",
       "date": 1665950400000,
@@ -59,10 +66,38 @@
     {
       "id": 8,
       "title": "Note",
+      "categoryId": 4,
       "body": "Please note that the cost of items displayed are completely and totally made up.",
       "email": "asd@gmail.com",
       "date": 1665864000000,
       "phone": "+374 99 887 943"
+    },
+    {
+      "id": 9,
+      "categoryId": 4,
+      "title": "Test for category",
+      "body": "aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141aaaaaaaaaaaaaaaaa12141",
+      "email": "asf@gmail.com",
+      "date": 1666900800000,
+      "phone": "234 5667890"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Category 1"
+    },
+    {
+      "id": 2,
+      "name": "Category 2"
+    },
+    {
+      "id": 3,
+      "name": "Category 3"
+    },
+    {
+      "id": 4,
+      "name": "Category 4"
     }
   ]
 }
